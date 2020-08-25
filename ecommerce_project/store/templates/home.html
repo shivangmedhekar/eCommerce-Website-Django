@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Home Page {% endblock %}
+
+{% block content %} 
+
+
+<div class="container-fluid">
+    <div class="row">
+        <img style="width: 100%;" src="{% static 'img/image.jpg' %}" alt="lol">
+    </div>
+</div>
+
+
+
+<div class="py-4">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-10 mx-auto m-2 text-center">
+                <h1 class="text-capitalze font-weight-bold">
+                    All Products
+                </h1>
+            </div>
+        </div>
+    </div>    
+</div>
+
+<div class="container">
+    <div class="row">
+        {% for i in '12345678' %}
+
+        <div class="col-9 mx-auto col-md-6 col-lg-3">
+            
+            <div class="card mb-4" style="border-color: transparent;">
+                <div class="p-4">
+                    <img src="{% static 'img/product-1.png' %}" class="card-img-top" alt="">
+
+                </div>
+            
+            
+            
+                <div class="card-footer d-flex justify-content-between" style="background: transparent; border-color: transparent;">
+                    <p class="font-weight-bold mb-0">
+                        Pixel 10
+                    </p>
+                    <h5 class="text-info font-italic mb-0">
+                        <span class="mr-1">$</span> 499
+                    </h5>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        
+    </div>
+</div>
+
+
+{% endblock %}
