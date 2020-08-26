@@ -91,6 +91,23 @@
             </tbody>
         </table>
 
+        <form action="" method="POST">
+            {% csrf_token %}
+            <script
+              src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key= {{ data_key }}
+              data-amount="{{ stripe_total }}"
+              data-name="SMEDHEKAR"
+              data-description="{{ description }}"
+              data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+              data-locale="auto"
+              data-shipping-address = "true"
+              data-billing-address = "true"
+              data-zipcode = "true"
+              data-currency="inr">
+            </script>
+          </form>
+
 
         <div class="mx-auto">
             <a href="" style="text-decoration: none;">
