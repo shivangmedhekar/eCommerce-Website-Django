@@ -1,4 +1,5 @@
 # eCommerce Website Django
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)]
 
 A fully functioning eCommerce website and application using the Python Django framework, that will communicate with Stripe to accept payments and will also receive data back to the admin for sale reporting.
 
