@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Product,Order,OrderItem
+from .models import Category, Product,Order,OrderItem, Review
 
 # Register your models here.
 class CategoryAdmin(admin.ModelAdmin):
@@ -49,3 +49,9 @@ class OrderAdmin(admin.ModelAdmin):
 
     def has_deleted_permission(self, request, obj=None):
         return False
+
+    def has_add_permission(self, request):
+        return False
+
+    
+admin.site.register(Review)
